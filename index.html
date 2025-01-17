@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Pal - Digital Whiteboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CANVAS PAL</h1>
+            <p>Your Digital Drawing Companion</p>
+        </header>
+        <div class="tools">
+            <div class="tool-group">
+                <button id="pencil" class="active">Pencil</button>
+                <button id="pen">
+                    <span>Pen</span>
+                </button>
+                <button id="eraser">
+                    <span>Eraser</span>
+                </button>
+                <button id="text">
+                    <span>Text</span>
+                </button>
+            </div>
+            <div class="tool-group">
+                <select id="fontSize">
+                    <option value="20">20px</option>
+                    <option value="24">24px</option>
+                    <option value="32">32px</option>
+                    <option value="48">48px</option>
+                </select>
+                <select id="shapes">
+                    <option value="none">Shapes</option>
+                    <option value="rectangle">Rectangle</option>
+                    <option value="circle">Circle</option>
+                    <option value="line">Line</option>
+                </select>
+            </div>
+            <div class="tool-group">
+                <div class="color-picker">
+                    <label>Color</label>
+                    <input type="color" id="strokeColor" value="#000000">
+                </div>
+                <div class="stroke-width">
+                    <label>Size</label>
+                    <input type="range" id="strokeWidth" min="1" max="50" value="5">
+                </div>
+                <div class="color-picker">
+                    <label>Background</label>
+                    <input type="color" id="bgColor" value="#ffffff">
+                </div>
+            </div>
+            <div class="tool-group">
+                <button id="clear" class="danger">Clear All</button>
+            </div>
+        </div>
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
